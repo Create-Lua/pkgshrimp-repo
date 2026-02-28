@@ -32,7 +32,7 @@ def prompt(shell_state):
     folder_name = os.path.basename(shell_state["current_dir"])
     if not folder_name:  # root directory
         folder_name = "/"
-    return input(f"{folder_name}>> ").strip()
+    return input(f"{folder_name}> ").strip()
 
 # ----------------------------
 # Main shell loop
