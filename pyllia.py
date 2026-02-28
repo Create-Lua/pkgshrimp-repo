@@ -10,6 +10,12 @@ def run(args, shell_state):
 
     elif flag == "--credits":
         print("Pyllia created by Alex")
+    
+    elif flag == "cow":
+        print("((...))")
+        print("( o o )")
+        print(" \   /")
+        print("  ^_^")
 
     else:
         print("Invalid usage.")
