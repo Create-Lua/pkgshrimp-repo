@@ -6,7 +6,7 @@ def run(args, shell_state):
     flag = args[0]
 
     if flag == "--version":
-        print("Pyllia version 0.1.0")
+        print("Pyllia version 1.5")
 
     elif flag == "--credits":
         print("Pyllia created by Alex")
