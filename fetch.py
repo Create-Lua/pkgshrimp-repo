@@ -4,7 +4,7 @@ import json
 
 def run(args, shell_state):
     if len(args) < 1:
-        print("Usage: pkgshrimp -S|-R|-U|-Ua <package_name>")
+        print("Usage: fetch -S|-R|-U|-Ua <package_name>")
         return
 
     flag = args[0]
@@ -14,7 +14,7 @@ def run(args, shell_state):
 
     installed_packages = [
         f for f in os.listdir(cmds_dir)
-        if f.endswith(".py") and f != "pkgshrimp.py"
+        if f.endswith(".py") and f != "fetch.py"
     ]
 
     repo_user = "Create-Lua"
@@ -36,7 +36,7 @@ def run(args, shell_state):
     # ------------------- INSTALL -------------------
     if flag == "-S":
         if len(args) < 2:
-            print("Usage: pkgshrimp -S <package_name>")
+            print("Usage: fetch -S <package_name>")
             return
         package = args[1]
         dest_path = os.path.join(cmds_dir, f"{package}.py")
@@ -49,7 +49,7 @@ def run(args, shell_state):
     # ------------------- REMOVE -------------------
     elif flag == "-R":
         if len(args) < 2:
-            print("Usage: pkgshrimp -R <package_name>")
+            print("Usage: fetch -R <package_name>")
             return
         package = args[1]
         dest_path = os.path.join(cmds_dir, f"{package}.py")
